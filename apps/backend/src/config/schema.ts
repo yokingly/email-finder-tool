@@ -65,7 +65,7 @@ export const emailPatterns = pgTable('email_patterns', {
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 }, (table) => ({
-  domainIdx: index('domain_idx').on(table.domain),
+  patternDomainIdx: index('pattern_domain_idx').on(table.domain),
   patternTypeIdx: index('pattern_type_idx').on(table.patternType),
 }));
 
